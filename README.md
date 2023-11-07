@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# This is how React Works
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Root:
 
-## Available Scripts
+  The index.html file inside the public directory, contains a div id="root" that is take at index.js and contains the entire code. This root element, in the index.js, renders the App Component, which is the main component that will display the entire website.
 
-In the project directory, you can run:
+- A component is javascript function that returns a UI in html.
+- JSX = HTML + JS -> You can put a JS code at the HTML element inside {}.
+- To return a component you need to call the function inside a self closed tag: <User/>
 
-### `npm start`
+- Props:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  Every react component will accept a argument that is a object called props. This props will represent all the data that we may want to pass to the component, and can be passed to another component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- useState:
 
-### `npm test`
+  In React, the state is data or properties you can use in our application. States are mutable, meaning their value can change, and for that, the useState() hook is used to handle and manage your states. The useState() hook allows you to create, track and update a state in functional components. To use the useState() hook, you must first import it from React, or you will have to append it like React.useState() anytime you have to create a state. useState() hook does not return just a variable, as seen above, but it also returns a second value, a function that you can use to update the state value.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  const [state, setState] = useState(initialState);
 
-### `npm run build`
+- Component Lifecycle:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  1. mounting
+  2. updating
+  3. unmonting
